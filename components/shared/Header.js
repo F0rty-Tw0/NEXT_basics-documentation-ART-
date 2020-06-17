@@ -11,12 +11,16 @@ class Header extends React.Component {
 				<p>{title}</p>
 				{/* Children defined in props, in our case its an <h1>*/}
 				{this.props.children}
+				{/* Custom Styling with SCSS from external file, element must not be included in JSX style */}
+				<p className="customClassFromFile">Custom style from SCSS file</p>
+				<p style={{ fontSize: '25px' }}>Custom style from Inline Style</p>
+				<p className="customClassFromJSX">Custom style from JSX Style</p>
 				{/* Simple Navigation with Link */}
 				<Link href="/">
-					<a>Home</a>
+					<a className="navigation_Home">Home</a>
 				</Link>
 				<Link href="/about">
-					<a>About</a>
+					<a className="navigation_About">About</a>
 				</Link>
 				<Link href="/portfolios">
 					<a>Portfolio</a>
@@ -30,6 +34,20 @@ class Header extends React.Component {
 				<Link href="/foo">
 					<a>Foo</a>
 				</Link>
+				{/* JSX Styling for a Component itself */}
+				<style jsx>
+					{`
+						a {
+							font-size: 20px;
+						}
+						.navigation_Home {
+							font-size: 30px;
+						}
+						.customClassFromJSX {
+							font-size: 30px;
+						}
+					`}
+				</style>
 			</React.Fragment>
 		);
 	}

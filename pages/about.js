@@ -1,13 +1,14 @@
 import React from 'react';
-import Header from '../components/shared/Header';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class About extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				{/* Shared Header Component */}
-				<Header />
-				<h1 className="title"> This is an About page</h1>
+				{/* Base Layout - Shared component which has Header */}
+				<BaseLayout>					
+					<h1 className="title"> This is an About page</h1>
+				</BaseLayout>
 			</React.Fragment>
 		);
 	}
