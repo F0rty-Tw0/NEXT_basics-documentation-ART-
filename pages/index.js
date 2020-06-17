@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Header from '../components/shared/Header';
 
 //==================================================
 //Functional Component
@@ -45,26 +46,9 @@ class Index extends React.Component {
 		return (
 			//React.Fragment is used instead of <div></div> to hide it from source
 			<React.Fragment>
-				<h1 className="title"> This is an Index page(Class Component)</h1>;
-				{/* Simple Navigation with Link */}
-				<Link href="/">
-					<a>Home</a>
-				</Link>
-				<Link href="/about">
-					<a>About</a>
-				</Link>
-				<Link href="/portfolios">
-					<a>Portfolio</a>
-				</Link>
-				<Link href="/blogs">
-					<a>Blog</a>
-				</Link>
-				<Link href="/cv">
-					<a>CV</a>
-				</Link>
-				<Link href="/foo">
-					<a>Foo</a>
-				</Link>
+				{/* Shared Header Component */}
+				<Header />
+				<h1 className="title"> This is an Index page(Class Component)</h1>
 			</React.Fragment>
 		);
 	}
