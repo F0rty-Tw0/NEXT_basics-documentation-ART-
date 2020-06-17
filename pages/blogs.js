@@ -5,7 +5,7 @@ class Blogs extends React.Component {
 	render() {
 		return (
 			<BaseLayout>
-				<h1 className="title"> This is an Blogs page(Class Component)</h1>
+				<h1 className="title"> This is a Blogs page(Class Component)</h1>
 			</BaseLayout>
 		);
 	}

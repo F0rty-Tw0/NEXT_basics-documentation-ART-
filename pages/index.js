@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
+import SuperComponent from '../components/SuperComponent';
 // import Header from '../components/shared/Header';
 
 //==================================================
@@ -41,11 +42,14 @@ import BaseLayout from '../components/layouts/BaseLayout';
 // }
 //--------------------------------------------------
 
-class Index extends React.Component {
+// class Index extends React.Component {
+//Calls everything what is included in SuperComponent
+class Index extends SuperComponent {
 	//Lifecycle function Constructor
-	constructor() {
+	//Passing props to every constructor
+	constructor(props) {
 		//In Constructor you have to call always Super()
-		super();
+		super(props);
 
 		//Asigning a state of a title
 		this.state = {
