@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import Header from '../components/shared/Header';
+// import Link from 'next/link';
 
 //==================================================
 //Functional Component
@@ -46,8 +46,11 @@ class Index extends React.Component {
 		return (
 			//React.Fragment is used instead of <div></div> to hide it from source
 			<React.Fragment>
-				{/* Shared Header Component */}
-				<Header />
+				{/* Shared Header Component with defined props(title)*/}
+				<Header title={'I am a Header Component'}>
+					{/* Child props deffinition here */}
+					<h1 className="title">I am Header Subtitle</h1>
+				</Header>
 				<h1 className="title"> This is an Index page(Class Component)</h1>
 			</React.Fragment>
 		);

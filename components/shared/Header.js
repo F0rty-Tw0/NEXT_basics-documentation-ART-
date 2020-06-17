@@ -3,8 +3,14 @@ import Link from 'next/link';
 
 class Header extends React.Component {
 	render() {
+		//Using props(data) from Parent Component in our example its title
+		const title = this.props.title;
 		return (
 			<React.Fragment>
+				{/* Title defined in props */}
+				<p>{title}</p>
+				{/* Children defined in props, in our case its an <h1>*/}
+				{this.props.children}
 				{/* Simple Navigation with Link */}
 				<Link href="/">
 					<a>Home</a>
