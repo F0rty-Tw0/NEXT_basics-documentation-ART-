@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 //==================================================
 //Functional Component
@@ -45,12 +46,25 @@ class Index extends React.Component {
 			//React.Fragment is used instead of <div></div> to hide it from source
 			<React.Fragment>
 				<h1 className="title"> This is an Index page(Class Component)</h1>;
-				<a href="/">Home</a>
-				<a href="/about">About</a>
-				<a href="/portfolios">Portfolio</a>
-				<a href="/blogs">Blog</a>
-				<a href="/cv">CV</a>
-				<a href="/foo">Foo</a>
+				{/* Simple Navigation with Link */}
+				<Link href="/">
+					<a>Home</a>
+				</Link>
+				<Link href="/about">
+					<a>About</a>
+				</Link>
+				<Link href="/portfolios">
+					<a>Portfolio</a>
+				</Link>
+				<Link href="/blogs">
+					<a>Blog</a>
+				</Link>
+				<Link href="/cv">
+					<a>CV</a>
+				</Link>
+				<Link href="/foo">
+					<a>Foo</a>
+				</Link>
 			</React.Fragment>
 		);
 	}
