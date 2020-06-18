@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseLayout from '../components/layouts/BaseLayout';
+import BaseLayout from '../../components/layouts/BaseLayout';
 //Importing router to use fetched Data from other Component
 import { withRouter } from 'next/router';
 
@@ -10,7 +10,7 @@ class PortfolioDetail extends React.Component {
 		return (
 			<BaseLayout>
 				<h1 className="title"> This is a PortfolioDetail page(Class Component)</h1>
-				<h2>{this.props.router.query.title}</h2>
+				<h2>{this.props.router.query.id}</h2>
 			</BaseLayout>
 		);
 	}

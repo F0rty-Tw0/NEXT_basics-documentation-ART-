@@ -32,7 +32,7 @@ class Portfolios extends React.Component {
 				//Adding an unique key for every single post
 				<li key={justOnePost.id}>
 					{/* Adding a link to the data independently and adding a query parameter to it */}
-					<Link href={`/portfolioDetail?title=${justOnePost.title}`}>
+					<Link as={`/portfolioDetail/${justOnePost.id}`} href="/portfolioDetail/[id]">
 						<a className="">{justOnePost.title}</a>
 					</Link>
 				</li>
