@@ -29,7 +29,8 @@ class Portfolios extends React.Component {
 	renderPosts(posts) {
 		return posts.map((justOnePost) => {
 			return (
-				<li>
+				//Adding an unique key for every single post
+				<li key={justOnePost.id}>
 					{/* Adding a link to the data independently and adding a query parameter to it */}
 					<Link href={`/portfolioDetail?title=${justOnePost.title}`}>
 						<a className="">{justOnePost.title}</a>
