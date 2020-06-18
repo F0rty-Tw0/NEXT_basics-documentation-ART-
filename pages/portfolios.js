@@ -13,8 +13,8 @@ class Portfolios extends React.Component {
 		try {
 			const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
 			posts = response.data;
-			console.log('Showing awaited Data from axios');
-			console.log(posts);
+			// console.log('Showing awaited Data from axios');
+			// console.log(posts);
 		} catch (error) {
 			console.log(error);
 		}

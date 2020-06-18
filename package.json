@@ -10,13 +10,14 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "node server.js",
 		"build": "next build",
-		"start": "NODE_ENV=production node server.js"
+		"start": "SET NODE_ENV=production & node server.js"
 	},
 	"dependencies": {
 		"@zeit/next-sass": "^1.0.1",
 		"axios": "^0.19.2",
 		"express": "^4.17.1",
 		"next": "^9.4.4",
+		"next-routes": "^1.4.2",
 		"node": "^14.4.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",

@@ -55,8 +55,8 @@ class Index extends SuperComponent {
 		try {
 			const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
 			userData = response.data;
-			console.log('Showing awaited Data from axios');
-			console.log(userData);
+			// console.log('Showing awaited Data from axios');
+			// console.log(userData);
 		} catch (error) {
 			console.log(error);
 		}

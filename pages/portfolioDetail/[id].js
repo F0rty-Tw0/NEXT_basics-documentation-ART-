@@ -16,10 +16,10 @@ class PortfolioDetail extends React.Component {
 		//Getting data from an URL using axios then displaying it in a console, and catching an error if there is one and displaying it in console too.
 		try {
 			const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+			// console.log('Showing awaited Data from axios');
+			// console.log('Displaying posts from [id]:');
+			// console.log(post);
 			post = response.data;
-			console.log('Showing awaited Data from axios');
-			console.log('Displaying posts from [id]:');
-			console.log(post);
 		} catch (error) {
 			console.log(error);
 		}

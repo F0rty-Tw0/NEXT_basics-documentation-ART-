@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Link as NextLink } from '../../routes';
 
 class Header extends React.Component {
 	render() {
@@ -34,6 +35,12 @@ class Header extends React.Component {
 				<Link href="/foo">
 					<a>Foo</a>
 				</Link>
+				<NextLink route="test" params={{ id: '2' }}>
+					<a>Test 2</a>
+				</NextLink>
+				<NextLink route="test" params={{ id: '5' }}>
+					<a>Test 5</a>
+				</NextLink>
 				{/* JSX Styling for a Component itself */}
 				<style jsx>
 					{`
