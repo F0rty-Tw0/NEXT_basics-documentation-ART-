@@ -45,6 +45,13 @@ import SuperComponent from '../components/SuperComponent';
 // class Index extends React.Component {
 //Calls everything what is included in SuperComponent
 class Index extends SuperComponent {
+	//getInitialProps a static function(that can be called without initiazation) to render the content on server and client side
+	static getInitialProps() {
+		console.log('getInitialProps');
+		//Should always return an object
+		return { initailData: [ 1, 2, 3, 4, 5 ] };
+	}
+
 	//Lifecycle function Constructor
 	//Passing props to every constructor
 	constructor(props) {
@@ -91,6 +98,8 @@ class Index extends SuperComponent {
 		console.log('render');
 		//Destructurizing a title from this state object which equals to - const title = this.state.title;
 		const { title } = this.state;
+		//Getting data from getInitialProps
+		const initailData = this.props.initailData;
 		return (
 			//React.Fragment is used instead of <div /> to hide it from source
 			<React.Fragment>
