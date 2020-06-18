@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import SuperComponent from '../components/SuperComponent';
+//Importing Axios to get data from an API
 import axios from 'axios';
 // import Header from '../components/shared/Header';
 

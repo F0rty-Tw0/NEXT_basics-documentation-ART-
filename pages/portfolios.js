@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
+import Link from 'next/link';
 //Duplicating the axios use from the Index, its better to have it somewhere centralized where we can use it
 import axios from 'axios';
 
@@ -27,7 +28,14 @@ class Portfolios extends React.Component {
 	//A function to iterate(loop) between posts to display them all
 	renderPosts(posts) {
 		return posts.map((justOnePost) => {
-			return <li> {justOnePost.title}</li>;
+			return (
+				<li>
+					{/* Adding a link to the data independently and adding a query parameter to it */}
+					<Link href={`/portfolioDetail?title=${justOnePost.title}`}>
+						<a className="">{justOnePost.title}</a>
+					</Link>
+				</li>
+			);
 		});
 	}
 
